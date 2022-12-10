@@ -1,4 +1,5 @@
 import React from 'react';
+import "./Coin.css";
 
 const Coin = ({image, name, symbol, current_price, price_change, volume, sparkline }) => {
   return (
@@ -16,7 +17,7 @@ const Coin = ({image, name, symbol, current_price, price_change, volume, sparkli
                 ):(
                     <p className='coin-change-green'>{price_change}%</p>
                 )}
-                <p className='coin-price'>{volume}</p>
+                <p className='coin-price'>${volume}</p>
             </div>
         </div>
     </div>

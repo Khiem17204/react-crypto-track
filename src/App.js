@@ -6,7 +6,7 @@ import Coin from './Coin';
 
 function App() {
   const [coin, setCoin] = useState([])
-  const [search, setSearch] = useState(" ")
+  const [search, setSearch] = useState("")
   useEffect(() => {
     axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=true&price_change_percentage=24h")
     .then(result =>{
@@ -26,7 +26,7 @@ function App() {
   return (
     <div className='coin-app'>
       <div className='search'>
-        <form>
+        <form action="">
           <input 
           type="text" 
           className='search-input'
