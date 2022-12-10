@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Coin.css";
+import { Sparklines, SparklinesLine } from 'react-sparklines';
+
 
 const Coin = ({image, name, symbol, current_price, price_change, volume, sparkline }) => {
   return (
@@ -11,13 +13,17 @@ const Coin = ({image, name, symbol, current_price, price_change, volume, sparkli
                 <p className='coin-symbol'>{symbol}</p>
             </div>
             <div className='coin-data'>
-                <p className='coin-price'>${current_price}</p>
+                <p className='coin-price'>${current_price.toLocaleString()}</p>
                 {price_change < 0 ?(
-                    <p className='coin-change-red'>{price_change}%</p>
+                    <p className='coin-change-red'>{price_change.toLocaleString()}%</p>
                 ):(
-                    <p className='coin-change-green'>{price_change}%</p>
+                    <p className='coin-change-green'>{price_change.toLocaleString()}%</p>
                 )}
-                <p className='coin-price'>${volume}</p>
+                <p className='coin-price'>${volume.toLocaleString()}</p>
+                
+                <Sparklines data={sparkline} svgHeight={40} svgWidth={100}>
+                    <SparklinesLine color='lightblue'/>
+                </Sparklines>        
             </div>
         </div>
     </div>

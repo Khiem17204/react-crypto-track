@@ -8,7 +8,7 @@ function App() {
   const [coin, setCoin] = useState([])
   const [search, setSearch] = useState("")
   useEffect(() => {
-    axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=true&price_change_percentage=24h")
+    axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=30&page=1&sparkline=true&price_change_percentage=24h")
     .then(result =>{
       setCoin(result.data)
       console.log(result.data)
@@ -35,6 +35,8 @@ function App() {
           />
         </form>
       </div>
+        
+      
 
       {filteredCoin.map(coin=>{
         return(
@@ -46,7 +48,7 @@ function App() {
         current_price={coin.current_price}
         price_change={coin.price_change_percentage_24h}
         volume={coin.total_volume}
-        sparkline={coin.sparkline_in_7d}
+        sparkline={coin.sparkline_in_7d.price}
           />  
         );
       })}
