@@ -15,7 +15,7 @@
   align-items: center;
   color: black;
   border-color: white;
-  border-width: 2px;
+  border-width: 10px;
 }
 
 .search{
@@ -24,5 +24,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-width: 10px;
+  margin: 50px 0 50px 0;
+  width: 1000px;
+}
+
+.search-input{
+  width: 250px;
+  height: 55px;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  background-color: #aaaa;
+}
+
+.search-input::placeholder{
+  color: white;
 }

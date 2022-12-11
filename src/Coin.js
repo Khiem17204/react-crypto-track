@@ -8,7 +8,7 @@ const Coin = ({image, name, symbol, current_price, price_change, volume, sparkli
     <div className='coin-container'>
         <div className='coin-row'>
             <div className='coin-name'>
-                <img src={image} alt="crypto"/>
+                <img className='image' src={image} alt="crypto"/>
                 <h1>{name}</h1>
                 <p className='coin-symbol'>{symbol}</p>
             </div>
@@ -21,7 +21,7 @@ const Coin = ({image, name, symbol, current_price, price_change, volume, sparkli
                 )}
                 <p className='coin-price'>${volume.toLocaleString()}</p>
                 
-                <Sparklines data={sparkline} svgHeight={40} svgWidth={100}>
+                <Sparklines data={sparkline} svgHeight={50} svgWidth={100}>
                     <SparklinesLine color='lightblue'/>
                 </Sparklines>        
             </div>

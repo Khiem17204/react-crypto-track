@@ -36,7 +36,21 @@ function App() {
         </form>
       </div>
         
-      
+      <div className='coin-container'>
+        <div className='coin-row'>
+            <div className='coin-name'>
+              <p className='image'></p>
+              <h1>Name</h1>
+              <h1>Symbol</h1>
+            </div>
+            <div className='coin-data'>
+              <p className='coin-price'>Current Price</p>
+              <p className='coin-price'>Price Change 24h</p>
+              <p className='coin-price'>Total Volume</p>
+              <p>Sparklines</p>
+            </div>
+        </div>
+      </div>
 
       {filteredCoin.map(coin=>{
         return(

@@ -20,37 +20,39 @@
     justify-content: space-between;
 }
 
-.coin-name img{
+.image{
     height: 100%;
     width: 10%;
 }
 
-.coin-name p{
+.coin-symbol{
     text-transform: uppercase;
     width: 7%;
 }
 
 .coin-name h1{
     font-size: 15px;
+    width: 7%;
 }
 
 .coin-data{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     width: 60%;
 }
 
 .coin-price{
-    width: 10%;
+    width: 12%;
 }
 
 .coin-change-red{
     color: red;
-    width: 10%;
+    width: 12%;
 }
 
 .coin-change-green{
     color: green;
-    width: 10%;
+    width: 12%;
 }
