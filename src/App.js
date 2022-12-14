@@ -47,7 +47,7 @@ function App() {
               <p className='coin-price'>Current Price</p>
               <p className='coin-price'>Price Change 24h</p>
               <p className='coin-price'>Total Volume</p>
-              <p>Sparklines</p>
+              <p>Last 7 Days</p>
             </div>
         </div>
       </div>
